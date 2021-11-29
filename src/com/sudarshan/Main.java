@@ -7,18 +7,12 @@ import com.sudarshan.behavioural.state.BrushTool;
 import com.sudarshan.behavioural.state.Canvas;
 import com.sudarshan.behavioural.state.EraserTool;
 import com.sudarshan.behavioural.state.SelectionTool;
+import com.sudarshan.behavioural.strategy.*;
 
 public class Main {
     public static void main(String[] args) {
-       var browseHistory = new BrowseHistory();
-       browseHistory.push("URL1");
-       browseHistory.push("URL2");
-       browseHistory.push("URL3");
-
-       var iterator = browseHistory.createIterator();
-       while (iterator.hasNext()){
-           System.out.println(iterator.current());
-           iterator.next();
-       }
+        var imageStorage = new ImageStorage();
+        imageStorage.store("image1", new JpegCompressor(), new BlackAndWhiteFilter());
+        imageStorage.store("image1", new PngCompressor(), new BlackAndWhiteFilter());
     }
 }
