@@ -1,5 +1,6 @@
 package com.sudarshan;
 
+import com.sudarshan.behavioural.iterator.BrowseHistory;
 import com.sudarshan.behavioural.momento.Editor;
 import com.sudarshan.behavioural.momento.History;
 import com.sudarshan.behavioural.state.BrushTool;
@@ -9,17 +10,15 @@ import com.sudarshan.behavioural.state.SelectionTool;
 
 public class Main {
     public static void main(String[] args) {
-        var canvas = new Canvas();
-        canvas.setCurrentTool(new SelectionTool());
-        canvas.mouseDown();
-        canvas.mouseUp();
+       var browseHistory = new BrowseHistory();
+       browseHistory.push("URL1");
+       browseHistory.push("URL2");
+       browseHistory.push("URL3");
 
-        canvas.setCurrentTool(new EraserTool());
-        canvas.mouseDown();
-        canvas.mouseUp();
-
-        canvas.setCurrentTool(new BrushTool());
-        canvas.mouseDown();
-        canvas.mouseUp();
+       var iterator = browseHistory.createIterator();
+       while (iterator.hasNext()){
+           System.out.println(iterator.current());
+           iterator.next();
+       }
     }
 }
