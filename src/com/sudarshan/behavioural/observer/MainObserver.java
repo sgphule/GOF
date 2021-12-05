@@ -9,6 +9,6 @@ public class MainObserver {
         dataSource.add(sheet1);
         dataSource.add(sheet2);
         dataSource.add(chart);
-        dataSource.setValue(1);
+        dataSource.setValue(2);
     }
 }
