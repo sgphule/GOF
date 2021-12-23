@@ -1,4 +1,4 @@
-package com.sudarshan;
+package com.sudarshan.behavioural;
 
 import com.sudarshan.behavioural.iterator.BrowseHistory;
 import com.sudarshan.behavioural.momento.Editor;
