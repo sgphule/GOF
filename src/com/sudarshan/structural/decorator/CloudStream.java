@@ -1,4 +1,4 @@
-package com.sudarshan.decorator;
+package com.sudarshan.structural.decorator;
 
 public class CloudStream implements Stream{
     @Override

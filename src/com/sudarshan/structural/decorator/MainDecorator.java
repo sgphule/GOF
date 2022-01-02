@@ -1,4 +1,4 @@
-package com.sudarshan.decorator;
+package com.sudarshan.structural.decorator;
 
 public class MainDecorator {
     public static void main(String[] args){

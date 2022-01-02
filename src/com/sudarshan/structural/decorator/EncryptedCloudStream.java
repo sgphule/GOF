@@ -1,4 +1,4 @@
-package com.sudarshan.decorator;
+package com.sudarshan.structural.decorator;
 
 public class EncryptedCloudStream implements Stream{
     private Stream stream;
