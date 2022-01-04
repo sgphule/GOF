@@ -6,6 +6,5 @@ public class MainSingleton {
         manager.set("name","sudarshan");
         var other = ConfigManager.getInstance();
         System.out.println(other.get("name"));
-
     }
 }
